@@ -1,0 +1,26 @@
+{
+  "name": "BTC",
+  "version": "1.0.0",
+  "description": "Barclays Technology Challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack && cordova run browser --target=firefox"
+  },
+  "keywords": [],
+  "author": [
+    "George Wilson",
+    "Muhammed Patel"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.12.12"
+  },
+  "dependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-react": "^6.16.0",
+    "jsx-loader": "^0.13.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  }
+}
