@@ -4,3 +4,12 @@
   font-size: 2em;
   width: 100%;
 }
+/** SearchPage CSS**/
+#SearchPage{
+  padding: 10px 2%;
+}
+#SearchPage #listPreferences .ui.divided.list{
+  border:#000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

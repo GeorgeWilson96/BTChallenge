@@ -1,13 +1,18 @@
 var React  = require('react');
 var ReactDOM  = require('react-dom');
-var TopBar = require('./components/TopBar')
+var TopBar = require('./components/TopBar');
+var Router = require('./components/Router').Router;
+var router = require('./components/Router').router;
+var IndexPage = require('./pages/IndexPage');
+var SearchPage = require('./pages/SearchPage');
 var Screen = React.createClass({
   render:function(){
     return (<div>
       <TopBar title="TEST"/>
-      <div onClick={()=>{alert('HELLO');}}>
-      Hello
-      </div>
+      <Router router={router}>
+        <IndexPage path="/" router={router}/>
+        <SearchPage path="/search" router={router}/>
+      </Router>
     </div>);
   }
 });
