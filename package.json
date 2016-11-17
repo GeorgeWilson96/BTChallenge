@@ -4,7 +4,7 @@
   "description": "Barclays Technology Challenge",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && cordova run browser --target=firefox"
+    "start": "webpack && cordova run browser "
   },
   "keywords": [],
   "author": [
@@ -22,6 +22,7 @@
     "elemental": "^0.6.1",
     "jsx-loader": "^0.13.2",
     "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.4.0",
     "react-dom": "^15.3.2",
     "superagent": "^2.3.0"
   }
