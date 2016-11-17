@@ -32,15 +32,24 @@ var SearchPage = React.createClass({
   addChip:function(chip){
     var chips = this.state.chips;
     chips.push(chip);
-    this.setState({chips:chip});
+    this.setState({chips:chips});
   },
   render:function(){
     var list = [];
       this.state.list.map((chip)=>{
-        list.push(<div className="item" onClick={()=>{this.addChip(chip)}}>{chip}</div>);
+        list.push(<div className="item PrefItem" onClick={()=>{this.addChip(chip)}}>{chip}</div>);
+      });
+    var chips = [];
+      this.state.chips.map((chip)=>{
+        chips.push(<div className="md-chip">
+          <div className="md-chip-text">
+            {chip}
+            </div>
+        </div>);
+        console.log(chips);
       });
     if(this.state.list.length === 0 && this.state.text.length > 0){
-      list.push(<div className="item">Not Found</div>)
+      list.push(<div className="chip">Not Found</div>)
     }
     return (<div id="SearchPage">
       <div className="ui icon fluid input">
@@ -48,7 +57,7 @@ var SearchPage = React.createClass({
           type="text"
           onChange={this.textChanged}
           value={this.state.text}/>
-        <i className="add icon" onClick={()=>{this.addChip(this.state.text);}}></i>
+        <i className="search icon"></i>
       </div>
       <div className="ui segment listPreferences">
         <div className="ui divided list">
@@ -56,7 +65,7 @@ var SearchPage = React.createClass({
         </div>
       </div>
       <div className="chips">
-        {this.state.chips}
+        {chips}
       </div>
       <div className="ui fluid positive button">Next</div>
     </div>);
