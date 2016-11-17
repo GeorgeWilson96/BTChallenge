@@ -13,3 +13,22 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
+/** IndexPage CSS**/
+#IndexPage .ui.button.fluid.homeButton{
+  height: 26vh !important;
+  margin-top: 1vh;
+}
+
+#IndexPage #userIcon{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 3em;
+}
+
+#IndexPage #helpIcon{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 3.5em;
+}
