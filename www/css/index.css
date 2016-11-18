@@ -16,3 +16,37 @@
 div.PrefItem{
   padding: 5px 0px !important;
 }
+/** IndexPage CSS**/
+#IndexPage .ui.button.fluid.homeButton{
+  height: 26vh !important;
+  margin-top: 1vh;
+}
+
+#IndexPage #userIcon{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 3em;
+}
+
+#IndexPage #helpIcon{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  font-size: 3.5em;
+}
+
+#Date {
+  font-size: 3em;
+  text-align: center;
+}
+
+#Date #checkboxes {
+    margin-top: 6vh;
+}
+#checkboxes div{
+  margin:3vh;
+}
+#checkboxes div input{
+  transform: scale(2);
+}
