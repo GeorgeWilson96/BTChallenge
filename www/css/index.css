@@ -36,5 +36,14 @@
 #Date {
   font-size: 3em;
   text-align: center;
-  
+}
+
+#Date #checkboxes {
+    margin-top: 6vh;
+}
+#checkboxes div{
+  margin:3vh;
+}
+#checkboxes div input{
+  transform: scale(2);
 }
