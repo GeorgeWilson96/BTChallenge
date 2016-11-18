@@ -5,6 +5,7 @@ var Router = require('./components/Router').Router;
 var router = require('./components/Router').router;
 var IndexPage = require('./pages/IndexPage');
 var SearchPage = require('./pages/SearchPage');
+var FloorPlanPage = require('./pages/FloorPlanPage');
 var Screen = React.createClass({
   render:function(){
     return (<div>
@@ -12,6 +13,7 @@ var Screen = React.createClass({
       <Router router={router}>
         <IndexPage path="/" router={router}/>
         <SearchPage path="/search" router={router}/>
+        <FloorPlanPage path="/floor" router={router}/>
       </Router>
     </div>);
   }
