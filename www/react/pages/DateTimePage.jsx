@@ -11,7 +11,7 @@ var DateTimePage = React.createClass({
         <div style={{display:"block"}}><input type="checkbox" name = "evening" /><label for = "evening">  Evening (17:00 - 22:00)</label></div>
         <div style={{display:"block"}}><input type="checkbox" name = "overnight" /><label for = "overnight">    Overnight (22:00 - 07:00)</label></div>
       </div>
-        {/*<a onClick={()=>{this.props.router.goto("/FloorPlanPage");}}>*/}<div id = "fplanbutton"><button className = "ui button fluid homeButton">Next</button></div>{/*</a>*/}
+        {/*<a }}>*/}<div id = "fplanbutton"><button onClick={()=>{this.props.router.goto("/floor");}} className = "ui button fluid homeButton">Next</button></div>{/*</a>*/}
     </div>);
   }
 });

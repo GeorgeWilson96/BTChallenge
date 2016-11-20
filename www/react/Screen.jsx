@@ -9,6 +9,7 @@ var FloorPlanPage = require('./pages/FloorPlanPage');
 var DateTime = require('./pages/DateTimePage');
 var FindPerson = require('./pages/FindPerson');
 var ProfilePage = require('./pages/ProfilePage');
+import mat from 'material-ui/Avatar';
 var HelpPage = require('./pages/HelpPage');
 var Screen = React.createClass({
   render:function(){

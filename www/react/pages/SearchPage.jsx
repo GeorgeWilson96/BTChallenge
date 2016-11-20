@@ -10,7 +10,7 @@ var SearchPage = React.createClass({
     this.setState({text:value});
     if(value){
       request
-      .get('/json/preferences.json')
+      .get('json/preferences.json')
       .set('Accept', 'application/json')
       .end((err,res)=>{
         debugger;
@@ -67,7 +67,7 @@ var SearchPage = React.createClass({
       <div className="chips">
         {chips}
       </div>
-      <div className="ui fluid positive button">Next</div>
+      <div onClick={()=>{this.props.router.goto("/datetime");}} className="ui fluid positive button">Next</div>
     </div>);
   }
 });
