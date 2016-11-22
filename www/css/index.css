@@ -52,6 +52,16 @@
   font-style: italic;
 }
 
+#prof #imgg {
+  border-radius: 60%;
+}
+
+#form {
+  text-align: center;
+  font-size: 3.5em;
+  margin-top: 4vh;
+}
+
 /*$('.ui.sidebar')
   .sidebar('toggle')
 ;*/
