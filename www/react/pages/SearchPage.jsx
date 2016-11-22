@@ -1,6 +1,8 @@
 var React  = require('react');
 var request = require('superagent');
 var TopBar = require('../components/TopBar');
+const { Alert, Card, Col, Container, FormField, FormInput, InputGroup, Pagination, Pill, Row, Table } = require('elemental');
+
 var SearchPage = React.createClass({
   getInitialState:function(){
     return {text:"",chips:[],list:[]};
@@ -15,10 +17,14 @@ var SearchPage = React.createClass({
       .end((err,res)=>{
         debugger;
         var chips = [];
+        var id =0;
         if(res.ok){
           res.body.map((chip)=>{
             if(chip.toUpperCase().indexOf(value.toUpperCase())!== -1){
-              chips.push(chip);
+              if(this.state.chips.indexOf(chip)==-1){
+                chips.push(chip);
+                id++;
+              }
             }
           });
         }
@@ -30,41 +36,46 @@ var SearchPage = React.createClass({
     }
   },
   addChip:function(chip){
+    debugger;
     var chips = this.state.chips;
     chips.push(chip);
+    //remove chip from list of options
+    var list = this.state.list;
+    list.splice(list.indexOf(chip),1);
+    this.setState({chips:chips,list:list});
+  },
+  removeChip(id){
+    var chips = this.state.chips;
+    chips.splice(id,1);
     this.setState({chips:chips});
   },
   render:function(){
     var list = [];
-      this.state.list.map((chip)=>{
+      this.state.list.map((chip,id)=>{
+        console.log(this);
         list.push(<div className="item PrefItem" onClick={()=>{this.addChip(chip)}}>{chip}</div>);
       });
     var chips = [];
-      this.state.chips.map((chip)=>{
-        chips.push(<div className="md-chip">
-          <div className="md-chip-text">
-            {chip}
-            </div>
-        </div>);
-        console.log(chips);
+      this.state.chips.map((chip,id)=>{
+        chips.push(<Pill label={chip} onClear={()=>{this.removeChip(id)}} onClick={()=>{this.removeChip(id)}}/>);
       });
     if(this.state.list.length === 0 && this.state.text.length > 0){
-      list.push(<div className="chip">Not Found</div>)
+      list.push(<div>Not Found</div>)
     }
     return (<div id="SearchPage">
       <div className="ui icon fluid input">
         <input placeholder="Search..."
           type="text"
           onChange={this.textChanged}
-          value={this.state.text}/>
+          value={this.state.text} style={{zIndex:10}}/>
         <i className="search icon"></i>
       </div>
-      <div className="ui segment listPreferences">
-        <div className="ui divided list">
+      <div className="ui segment listPreferences" style={{marginTop:"-0.5em",display:(this.state.text)?"inherit":"none"}}>
+        <div className="ui list">
           {list}
         </div>
       </div>
-      <div className="chips">
+      <div className="ui segment">
         {chips}
       </div>
       <div onClick={()=>{this.props.router.goto("/datetime");}} className="ui fluid positive button">Next</div>

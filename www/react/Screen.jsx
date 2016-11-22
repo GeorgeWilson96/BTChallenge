@@ -11,9 +11,9 @@ var FindPerson = require('./pages/FindPerson');
 var ProfilePage = require('./pages/ProfilePage');
 import mat from 'material-ui/Avatar';
 var HelpPage = require('./pages/HelpPage');
-var Screen = React.createClass({
-  render:function(){
-    return (<div>
+
+const Screen = () =>(
+  <div>
       <TopBar title="TEST"/>
       <Router router={router}>
         <IndexPage path="/" router={router}/>
@@ -24,7 +24,6 @@ var Screen = React.createClass({
         <ProfilePage path="/profile" router={router}/>
         <HelpPage path="/help" router={router}/>
       </Router>
-    </div>);
-  }
-});
+    </div>
+  );
 ReactDOM.render(<Screen/>,document.body);
