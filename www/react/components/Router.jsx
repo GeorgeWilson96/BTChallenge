@@ -18,13 +18,15 @@ var router = {
   path:"/",
   goto:function(newPage) {
     debugger;
-    this.history.push(this.page);
+    this.history.push(this.path);
     this.path = newPage;
     this.origin.forceUpdate();
   },
   goBack:function(){
-    this.page = history.pop();
-  },
+    debugger;
+    this.path = this.history[this.history.length - 1];
+    this.origin.forceUpdate();
+  }
 
 };
 module.exports = {Router:Router,router:router};

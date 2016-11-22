@@ -14,7 +14,7 @@ var HelpPage = require('./pages/HelpPage');
 
 const Screen = () =>(
   <div>
-      <TopBar title="Bank Of America Hot Potato"/>
+      <TopBar router={router} title="Bank Of America Hot Potato"/>
       <Router router={router}>
         <IndexPage path="/" router={router}/>
         <SearchPage path="/search" router={router}/>
