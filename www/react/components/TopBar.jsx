@@ -2,21 +2,15 @@ var React  = require('react');
 var ReactDOM  = require('react-dom');
 
 var TopBar = React.createClass({
-  getInitialState:function(){
-    return {colour:"RED"};
-  },
-  changeColour:function() {
-    if (this.state.colour == "RED") {
-      this.setState({colour:"BLUE"});
-    }
-    else {
-      this.setState({colour:"RED"});
-    }
-  },
   render:function(){
-    return (<h2 className="header" style={{color:this.state.colour}} onClick={this.changeColour}>
-            {this.props.title}
-    </h2>)
+    return (<div style={{margin:"1vh 0",textAlign:"center"}}>
+
+      <h2 onClick={this.changeColour}>
+      <i className="chevron left icon" style={{float:"left"}}></i>
+            <div style={{display:"inline-flex"}}>{this.props.title}</div>
+            <div style={{height: "100%",display: "inline-flex",float: "right",maxWidth: "21%"}}><img src="./img/Logo.png" style={{float:"right"}}/></div>
+      </h2>
+    </div>)
   }
 });
 module.exports = TopBar;
