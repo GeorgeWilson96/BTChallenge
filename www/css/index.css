@@ -51,9 +51,20 @@ div.PrefItem{
   transform: scale(2);
 }
 
-$('.context.example .ui.sidebar')
-  .sidebar({
-    context: $('.context.example .bottom.segment')
-  })
-  .sidebar('attach events', '.context.example .menu .item')
-;
+#helpFeatures #italicWrite {
+  font-style: italic;
+}
+
+#prof #imgg {
+  border-radius: 60%;
+}
+
+#form {
+  text-align: center;
+  font-size: 3.5em;
+  margin-top: 4vh;
+}
+
+/*$('.ui.sidebar')
+  .sidebar('toggle')
+;*/
