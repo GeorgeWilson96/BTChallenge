@@ -4,13 +4,7 @@ var TopBar = require('../components/TopBar');
 var ProfilePage = React.createClass({
   render:function(){
     return (<div>
-    {/* const AvatarExampleSimple = () => (
-    disabled={true};
-    leftAvatar={
-      <Avatar src="images/uxceo-128.jpg" />
-    }
-  >
-)*/}
+
     </div>);
   }
 });

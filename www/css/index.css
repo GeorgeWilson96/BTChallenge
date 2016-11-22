@@ -48,9 +48,10 @@
   transform: scale(2);
 }
 
-$('.context.example .ui.sidebar')
-  .sidebar({
-    context: $('.context.example .bottom.segment')
-  })
-  .sidebar('attach events', '.context.example .menu .item')
-;
+#helpFeatures #italicWrite {
+  font-style: italic;
+}
+
+/*$('.ui.sidebar')
+  .sidebar('toggle')
+;*/
