@@ -7,7 +7,7 @@ var ProfilePage = React.createClass({
       <div className="ui link cards">
         <div className="card">
           <div className="image">
-            <img id = "imgg" src="http://semantic-ui.com/images/avatar2/large/matthew.png" />
+            <img id="imgg" src="./img/profiles/matthew.png" />
           </div>
           <div className="content">
             <div className="header">John Daniels</div>

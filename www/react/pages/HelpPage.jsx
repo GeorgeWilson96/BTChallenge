@@ -1,6 +1,5 @@
 var React  = require('react');
 var TopBar = require('../components/TopBar');
-var $ = require("jquery");
 var HelpPage = React.createClass({
   componentDidMount:function(){$('.ui.accordion').accordion();},
   render:function(){

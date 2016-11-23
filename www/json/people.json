@@ -1,0 +1,57 @@
+[
+  {
+    "name":"Alistiar Jackson",
+    "img":"alistair.png",
+    "title":"Infrastructure Architect"
+  },
+  {
+    "name":"Daniel Simon",
+    "img":"daniel.jpg",
+    "title":"Software Engineer"
+  },
+  {
+    "name":"Elliot Sloman",
+    "img":"elliot.jpg",
+    "title":"System Architect"
+  },
+  {
+    "name":"Elyse Wright",
+    "img":"elyse.png",
+    "title":"Graphic Designer"
+  },
+  {
+    "name":"Helen Carter",
+    "img":"helen.jpg",
+    "title":"System Engineer"
+  },
+  {
+    "name":"Jenny",
+    "img":"jenny.jpg",
+    "title":"Administrator"
+  },
+  {
+    "name":"Kirsty",
+    "img":"kirsty.png",
+    "title":"Human Rescources Manager"
+  },
+  {
+    "name":"Matt",
+    "img":"matt.jpg",
+    "title":"IT Technician"
+  },
+  {
+    "name":"Matthew ",
+    "img":"matthew.png",
+    "title":"Manager"
+  },
+  {
+    "name":"Molly",
+    "img":"molly.png",
+    "title":"Accounts Manager"
+  },
+  {
+    "name":"Steve",
+    "img":"steve.jpg",
+    "title":"Head Of Innovation"
+  }
+]
