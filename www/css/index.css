@@ -13,13 +13,11 @@
   margin-top: 10px;
   margin-bottom: 10px;
 }
-div.PrefItem{
-  padding: 5px 0px !important;
-}
 /** IndexPage CSS**/
 #IndexPage .ui.button.fluid.homeButton{
   height: 26vh !important;
   margin-top: 1vh;
+  font-size: 5em;
 }
 
 #IndexPage #userIcon{
@@ -51,6 +49,7 @@ div.PrefItem{
   transform: scale(2);
 }
 
+
 #helpFeatures #italicWrite {
   font-style: italic;
 }
@@ -59,11 +58,6 @@ div.PrefItem{
   border-radius: 60%;
 }
 
-#form {
-  text-align: center;
-  font-size: 3.5em;
-  margin-top: 4vh;
-}
 
 /*$('.ui.sidebar')
   .sidebar('toggle')

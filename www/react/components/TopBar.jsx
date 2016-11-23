@@ -10,7 +10,7 @@ var TopBar = React.createClass({
       <h2 onClick={this.changeColour}>
         <i className="chevron left icon" style={{float:"left"}} onClick={this.goBack}></i>
         <div style={{display:"inline-flex"}}>{this.props.title}</div>
-        <div style={{height: "100%",display: "inline-flex",float: "right",maxWidth: "21%"}}><img src="./img/Logo.png" style={{float:"right"}}/></div>
+        <div><img src="./img/Logo.png" style={{float: "right", height: "37px", position: "relative", top: "-18px"}}/></div>
       </h2>
     </div>)
   }

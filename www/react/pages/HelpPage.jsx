@@ -16,11 +16,11 @@ var HelpPage = React.createClass({
           <p> 3) *SOME TEXT* </p>
           <p> 4) *SOME TEXT* </p>
         </div>
-        <div className="title">
+        <div className="active title">
           <i className="dropdown icon"></i>
           FAQs
         </div>
-        <div className="content">
+        <div className="active content">
           <p> How do i change my preferences? </p>
           <div id = "italicWrite"><p> *SOME TEXT* </p></div>
           <br />
@@ -30,11 +30,11 @@ var HelpPage = React.createClass({
           <p> *QUESTION* </p>
           <p> *SOME TEXT* </p>
         </div>
-        <div className="title">
+        <div className="active title">
           <i className="dropdown icon"></i>
           Contact Us
         </div>
-        <div className="content">
+        <div className="active content">
           <p>admin@hotpotato.com</p>
         </div>
       </div>

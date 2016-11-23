@@ -25,6 +25,7 @@ var router = {
   goBack:function(){
     debugger;
     this.path = this.history[this.history.length - 1];
+    this.history.pop();
     this.origin.forceUpdate();
   }
 
