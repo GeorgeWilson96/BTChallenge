@@ -62,8 +62,9 @@ var SearchPage = React.createClass({
     if(this.state.list.length === 0 && this.state.text.length > 0){
       list.push(<div>Not Found</div>)
     }
-    return (<div id="SearchPage">
-      <div className="ui icon fluid input">
+    return (<div id="SearchPage" className="page">
+      <h2 className="ui header">What Do You Need ?</h2>
+      <div className="fluid ui icon input">
         <input placeholder="Search..."
           type="text"
           onChange={this.textChanged}

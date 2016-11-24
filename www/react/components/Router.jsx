@@ -24,8 +24,15 @@ var router = {
   },
   goBack:function(){
     debugger;
-    this.path = this.history[this.history.length - 1];
-    this.history.pop();
+    if(this.history.length >0){
+      this.path = this.history[this.history.length - 1];
+      this.history.pop();
+      this.origin.forceUpdate();
+    }
+  },
+  replace:function(path){
+    this.path = path;
+    this.history = [];
     this.origin.forceUpdate();
   }
 

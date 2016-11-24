@@ -1,5 +1,4 @@
 var React  = require('react');
-var ReactDOM  = require('react-dom');
 var TopBar = require('./components/TopBar');
 var Router = require('./components/Router').Router;
 var router = require('./components/Router').router;
@@ -56,4 +55,4 @@ const Screen = () =>(
   </div>
 </div>*/}
     </div>);
-ReactDOM.render(<Screen/>,document.body);
+    module.exports = Screen;

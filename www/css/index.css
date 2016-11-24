@@ -1,6 +1,13 @@
-
+#TopBar{
+  background-color: #b9b9b9;
+}
+@media screen and (max-width: 850px) {
+  img#BofALogo{
+    display: none !important;
+  }
+}
 /** SearchPage CSS**/
-#SearchPage{
+.page{
   padding: 10px 2%;
 }
 #SearchPage #listPreferences .ui.divided.list{
@@ -10,22 +17,18 @@
 }
 /** IndexPage CSS**/
 #IndexPage .ui.button.fluid.homeButton{
-  height: 26vh !important;
-  margin-top: 1vh;
-  font-size: 5em;
+  margin: 2vh 0px;
+  width: 96vw;
+  font-size: 7vh;
 }
 
 #IndexPage #userIcon{
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+  float: left;
   font-size: 3em;
 }
 
 #IndexPage #helpIcon{
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
+  float: right;
   font-size: 3.5em;
 }
 
@@ -50,9 +53,16 @@
 }
 
 #prof #imgg {
+  height: 33vh;
   border-radius: 60%;
 }
-
+#image{
+  display: inline-block;
+}
+#prof.page .content{
+  width: 75%;
+  display: inline-block;
+}
 
 /*$('.ui.sidebar')
   .sidebar('toggle')

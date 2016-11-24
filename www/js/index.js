@@ -1,21 +1,42 @@
 var app ={
-    initialize: function() {
-        this.bindEvents();
-    },
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    receivedEvent: function(id) {
-        var parentElement = document.body;
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-
-        console.log('Received Event: ' + id);
-    }
+  prefLSID:"Prefs",
+  bookLSID:"BookPos",
+  getPreferences:()=>{
+    return JSON.parse(window.localStorage.getItem(this.prefLSID));
+  },
+  setPreferences:(items)=>{
+    window.localStorage.setItem(this.prefLSID,JSON.stringify(items));
+  },
+  setBookPos:(pos)=>{
+    window.localStorage.setItem(this.bookLSID,pos);
+  },
+  getBookPos:()=>{
+    return window.localStorage.getItem(this.bookLSID);
+  },
+  removeBookPos:()=>{
+    window.localStorage.setItem(this.bookLSID,"");
+  }
 };
 
 app.initialize();
+
+function getNormalizedCoord(coord, zoom) {
+       var y = coord.y;
+       var x = coord.x;
+
+       // tile range in one direction range is dependent on zoom level
+       // 0 = 1 tile, 1 = 2 tiles, 2 = 4 tiles, 3 = 8 tiles, etc
+       var tileRange = 1 << zoom;
+
+       // don't repeat across y-axis (vertically)
+       if (y < 0 || y >= tileRange) {
+         return null;
+       }
+
+       // repeat across x-axis
+       if (x < 0 || x >= tileRange) {
+         x = (x % tileRange + tileRange) % tileRange;
+       }
+
+       return {x: x, y: y};
+     }
